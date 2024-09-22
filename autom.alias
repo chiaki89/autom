@@ -232,8 +232,8 @@ def move_towards(start, end, distance, occupied_positions):
     new_location = mapl.coords_to_loc(move_coords)
 
     # Check if the new location is occupied
-    # if new_location in occupied_positions:
-    #     new_location = find_nearest_unoccupied_position(start, end, occupied_positions)
+    if new_location in occupied_positions:
+        new_location = find_nearest_unoccupied_position(start, end, occupied_positions)
     
     # Calculate actual movement for the arrow
     new_pos = mapl.loc_to_coords(new_location)
